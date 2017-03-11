@@ -14,10 +14,10 @@ namespace SimpleGeometry
         {
             List<IPrintable> printables = new List<IPrintable>();
 
-            //List<Shape> shapes = new List<Shape>();
             printables.Add(new Circle(1));
             printables.Add(new Triangle(6, 5, 4));
             printables.Add(new RightAngledTriangle(3, 4));
+            printables.Add(new Square(10));
 
             foreach (var printable in printables)
                ShapePrinter.Print(printable);
