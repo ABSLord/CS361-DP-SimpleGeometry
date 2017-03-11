@@ -8,11 +8,14 @@ using GeometryLib.Shapes;
 
 namespace GeometryLib
 {
+
     public static class ShapePrinter
     {
-        public static void Print(Shape shape)
+        public static void Print(IPrintable iprintable)
         {
-            double area = 0;
+            Console.WriteLine(iprintable.Print());
+            //shape.Print();
+            /*double area = 0;
 
             if (shape is Circle)
             {
@@ -38,8 +41,7 @@ namespace GeometryLib
                 var side3 = triangle.Side3;
                 var p = (side1 + side2 + side3) / 2;
                 area = Math.Sqrt(p * (p - side1) * (p - side2) * (p - side3));
-                Console.WriteLine($"Triangle: sides: {side1} {side2} {side3}, area = {area}");
-            }
+                Console.WriteLine($"Triangle: sides: {side1} {side2} {side3}, area = {area}");*/
         }
     }
 }

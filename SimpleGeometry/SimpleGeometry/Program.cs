@@ -12,16 +12,19 @@ namespace SimpleGeometry
     {
         static void Main(string[] args)
         {
-            List<Shape> shapes = new List<Shape>();
-            shapes.Add(new Circle(1));
-            shapes.Add(new Triangle(6, 5, 4));
-            shapes.Add(new RightAngledTriangle(3, 4));
+            List<IPrintable> printables = new List<IPrintable>();
 
-            foreach (Shape shape in shapes)
-                ShapePrinter.Print(shape);
+            //List<Shape> shapes = new List<Shape>();
+            printables.Add(new Circle(1));
+            printables.Add(new Triangle(6, 5, 4));
+            printables.Add(new RightAngledTriangle(3, 4));
+
+            foreach (var printable in printables)
+               ShapePrinter.Print(printable);
 
             Console.WriteLine("Для завершения нажмите любую клавишу...");
             Console.ReadKey();
+
         }
     }
 }
