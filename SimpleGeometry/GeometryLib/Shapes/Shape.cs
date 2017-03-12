@@ -11,7 +11,7 @@ namespace GeometryLib.Shapes
     /// </summary>
     public abstract class Shape: IPrintable
     {
-        public virtual string Print() { return ""; }
-        public virtual double Area() { return 0; }
+        public abstract string Print();
+        public abstract double Area();
     }
 }
